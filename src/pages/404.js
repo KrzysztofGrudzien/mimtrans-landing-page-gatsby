@@ -1,6 +1,15 @@
-import React from "react"
+import React from "react";
+import Layout from '../components/Layout';
 
-const Error = () => <div>Contact</div>
+const Error = () => {
+    return (
+        <>
+            <Layout>
+                <div>404</div>
+            </Layout>
+        </>
+    )
+}
 
 
 export default Error;
