@@ -4,8 +4,9 @@ import Layout from '../components/Layout';
 const Testimonials = () => {
     return (
         <>
-            <Layout/>
-            <div>Rekomendacje</div>
+            <Layout>
+                <div>Rekomendacje</div>
+            </Layout>
         </>
     )
 }

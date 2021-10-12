@@ -4,8 +4,9 @@ import Layout from '../components/Layout';
 const Error = () => {
     return (
         <>
-            <Layout/>
-            <div>Contact</div>
+            <Layout>
+                <div>404</div>
+            </Layout>
         </>
     )
 }

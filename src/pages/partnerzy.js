@@ -4,8 +4,9 @@ import Layout from '../components/Layout';
 const Partners = () => {
     return (
         <>
-            <Layout/>
-            <div>Partnerzy</div>
+            <Layout>
+                <div>Partnerzy</div>
+            </Layout>
         </>
     )
 }

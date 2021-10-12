@@ -4,8 +4,9 @@ import Layout from '../components/Layout';
 const About = () => {
     return (
         <>
-            <Layout/>
-            <div>o nas</div>
+            <Layout>
+                <div>O nas</div>
+            </Layout>
         </>
     )
 }
