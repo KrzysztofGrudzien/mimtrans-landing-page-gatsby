@@ -1,15 +1,14 @@
-import React from "react";
-import Layout from '../components/Layout';
+import React from "react"
+import Layout from "../components/Layout"
 
 const Testimonials = () => {
-    return (
-        <>
-            <Layout>
-                <div>Rekomendacje</div>
-            </Layout>
-        </>
-    )
+  return (
+    <>
+      <Layout>
+        <div>Rekomendacje</div>
+      </Layout>
+    </>
+  )
 }
 
-
-export default Testimonials;
+export default Testimonials
