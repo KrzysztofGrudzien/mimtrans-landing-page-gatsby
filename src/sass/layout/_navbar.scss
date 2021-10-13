@@ -18,6 +18,7 @@
       }
 
       a {
+        border: none;
         color: $color-bg;
         font-size: 1.2rem;
         font-weight: 400;
@@ -26,6 +27,7 @@
   }
 
   &-link {
+    border-bottom: $color-bg solid 2px;
     color: $color-text;
     font-weight: 500;
 

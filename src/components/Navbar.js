@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import data from "../data/data"
 import { AiTwotoneCalendar } from "@react-icons/all-files/ai/AiTwotoneCalendar"
 import { FaMoneyCheckAlt } from "@react-icons/all-files/fa/FaMoneyCheckAlt"
+import logo from "../assets/img/logo.svg"
 
 const Navbar = () => {
   const { navigation } = data
@@ -13,6 +14,9 @@ const Navbar = () => {
 
   return (
     <Header className="container">
+      <ImgWrapper>
+        <img src={logo} alt="logo" />
+      </ImgWrapper>
       <nav className="navbar">
         <ul className="navbar-list">
           {navigation.map(
@@ -43,7 +47,11 @@ const Navbar = () => {
                       style={styles}
                     />
                   ) : null}
-                  <Link to={path} className={linkClassName}>
+                  <Link
+                    to={path}
+                    className={linkClassName}
+                    activeClassName="navbar-link--active"
+                  >
                     {title}
                   </Link>
                 </li>
@@ -57,7 +65,15 @@ const Navbar = () => {
 }
 
 const Header = styled.header`
-  padding: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+`
+
+const ImgWrapper = styled.div`
+  align-items: center;
+  display: flex;
+  width: 300px;
 `
 
 export default Navbar
