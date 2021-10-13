@@ -41,12 +41,18 @@ const data = {
       title: "Rozkład jazdy",
       className: "navbar-item navbar-item--action",
       linkClassName: "navbar-link",
+      icon: "AiTwotoneCalendar",
+      iconFill: "#fdfdfd",
+      iconSize: "1.6rem",
     },
     {
       path: "/taryfa-biletowa",
       title: "Taryfa biletowa",
       className: "navbar-item navbar-item--action",
       linkClassName: "navbar-link",
+      icon: "FaMoneyCheckAlt",
+      iconFill: "#fdfdfd",
+      iconSize: "1.6rem",
     },
   ],
 }
