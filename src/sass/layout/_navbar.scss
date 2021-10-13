@@ -1,0 +1,38 @@
+.navbar {
+  &-list {
+    display: flex;
+  }
+
+  &-item {
+    align-items: center;
+    display: flex;
+    padding: 0.5rem 1rem;
+
+    &--action {
+      background-image: $gradient-secondary;
+      border-radius: $radius;
+      margin-left: 2rem;
+
+      &:last-child {
+        margin-left: 0.5rem;
+      }
+
+      a {
+        border: none;
+        color: $color-bg;
+        font-size: 1.2rem;
+        font-weight: 400;
+      }
+    }
+  }
+
+  &-link {
+    border-bottom: $color-bg solid 2px;
+    color: $color-text;
+    font-weight: 500;
+
+    &--active {
+      border-bottom: $color-secondary solid 2px;
+    }
+  }
+}
