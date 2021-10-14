@@ -55,6 +55,32 @@ const data = {
       iconSize: "1.6rem",
     },
   ],
+  actionLinks: [
+    {
+      path: "/aktualnosci",
+      title: "Aktualności",
+      className: "navbar--active-link",
+      icon: "MdNotificationsActive",
+      iconFill: "#ff9f3d",
+      iconSize: "1.6rem",
+    },
+    {
+      path: "/",
+      title: "+48 602 516 919",
+      className: "navbar--active-link",
+      icon: "MdSmartphone",
+      iconFill: "#ff9f3d",
+      iconSize: "1.6rem",
+    },
+    {
+      path: "/kontakt",
+      title: "mimtrans@o2.pl",
+      className: "navbar--active-link",
+      icon: "MdEmail",
+      iconFill: "#ff9f3d",
+      iconSize: "1.6rem",
+    },
+  ],
 }
 
 export default data
