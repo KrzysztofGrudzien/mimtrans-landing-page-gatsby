@@ -12,6 +12,16 @@ const Navbar = () => {
     marginRight: "1rem",
   }
 
+  const addIcon = (icon, iconFill, iconSize) => {
+    if (icon === "AiTwotoneCalendar") {
+      return (
+        <AiTwotoneCalendar fill={iconFill} size={iconSize} style={styles} />
+      )
+    } else if (icon === "FaMoneyCheckAlt") {
+      return <FaMoneyCheckAlt fill={iconFill} size={iconSize} style={styles} />
+    }
+  }
+
   return (
     <Header className="container">
       <ImgWrapper>
@@ -34,24 +44,12 @@ const Navbar = () => {
             ) => {
               return (
                 <li className={className} key={index}>
-                  {icon === "AiTwotoneCalendar" ? (
-                    <AiTwotoneCalendar
-                      fill={iconFill}
-                      size={iconSize}
-                      style={styles}
-                    />
-                  ) : icon === "FaMoneyCheckAlt" ? (
-                    <FaMoneyCheckAlt
-                      fill={iconFill}
-                      size={iconSize}
-                      style={styles}
-                    />
-                  ) : null}
                   <Link
                     to={path}
                     className={linkClassName}
                     activeClassName="navbar-link--active"
                   >
+                    {addIcon(icon, iconFill, iconSize)}
                     {title}
                   </Link>
                 </li>
@@ -68,6 +66,11 @@ const Header = styled.header`
   display: flex;
   justify-content: space-between;
   padding: 2rem;
+
+  a {
+    align-items: center;
+    display: flex;
+  }
 `
 
 const ImgWrapper = styled.div`
