@@ -81,6 +81,32 @@ const data = {
       iconSize: "1.6rem",
     },
   ],
+  sitemap: [
+    {
+      path: "/",
+      title: "Home",
+    },
+    {
+      path: "/onas",
+      title: "O nas",
+    },
+    {
+      path: "/uslugi",
+      title: "Usługi",
+    },
+    {
+      path: "/rekomendacje",
+      title: "Rekomendacje",
+    },
+    {
+      path: "/partnerzy",
+      title: "Partnerzy",
+    },
+    {
+      path: "/kontakt",
+      title: "Kontakt",
+    },
+  ],
 }
 
 export default data
