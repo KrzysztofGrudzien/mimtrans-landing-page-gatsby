@@ -1,0 +1,97 @@
+.footer {
+  color: $color-bg;
+  display: grid;
+  grid-template-columns: 1fr 4rem 1fr;
+  grid-template-rows: 1fr 4rem;
+  position: relative;
+
+  &-title {
+    color: $color-primary-darker;
+  }
+
+  &-link {
+    align-items: center;
+    color: $color-bg;
+    display: flex;
+    font-size: 1.625rem;
+    transition: color 0.3s linear;
+    text-decoration: underline;
+
+    &:hover {
+      color: $color-primary-darker;
+    }
+
+    svg {
+      margin-right: 1rem;
+    }
+  }
+
+  &-list {
+    padding: 0;
+
+    &-item {
+      cursor: pointer;
+      transition: transform 0.2s ease-in-out;
+      transform: translateX(0);
+
+      &:hover {
+        transform: translateX(1rem);
+      }
+    }
+
+    &-link {
+      color: $color-primary-darker;
+      position: relative;
+
+      &::before {
+        background-color: $color-text-darker;
+        content: "";
+        height: 1.6rem;
+        left: -0.5rem;
+        position: absolute;
+        top: 0;
+        transition: background-color 0.3s ease-in-out, left 0.3s ease-in-out;
+        width: 0.2rem;
+      }
+
+      &:hover::before {
+        background-color: $color-secondary;
+        left: -1rem;
+      }
+
+      &:focus::before {
+        background-color: $color-secondary;
+        left: -1rem;
+      }
+    }
+
+    &-link-active {
+      color: $color-secondary;
+    }
+  }
+
+  &-column:nth-child(3) {
+    display: flex;
+    justify-content: space-between;
+
+    div {
+      width: 47%;
+    }
+  }
+
+  &-column-app {
+    padding-top: 2.8rem;
+  }
+
+  &-link-app {
+    background-image: $gradient-secondary;
+    border-radius: 3px;
+    color: $color-bg;
+    display: block;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    margin-top: 1rem;
+    padding: 1rem 1rem;
+    text-align: center;
+  }
+}
