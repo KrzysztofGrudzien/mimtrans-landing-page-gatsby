@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
     <>
       <ActionNav />
       <Navbar />
-      {children}
+      <main className="main">{children}</main>
       <Footer />
     </>
   )
