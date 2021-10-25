@@ -68,7 +68,7 @@ const Footer = () => {
             <div className="footer-column-app">
               <StaticImage
                 src="../assets/img/mobile-app.jpg"
-                alt="image of app"
+                alt="zdjęcie screenu aplikacji mobilnej"
                 className="footer-column-image"
                 layout="fullWidth"
                 placeholder="tracedSVG"
