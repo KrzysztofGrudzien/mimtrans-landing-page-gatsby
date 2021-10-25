@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 import { SiFacebook } from "@react-icons/all-files/si/SiFacebook"
 import data from "../data/data"
-import mobileAppImage from "../assets/img/mobile-app.jpg"
+import { StaticImage } from "gatsby-plugin-image"
 
 const Footer = () => {
   const { sitemap } = data
@@ -66,10 +66,12 @@ const Footer = () => {
               </p>
             </div>
             <div className="footer-column-app">
-              <img
-                src={mobileAppImage}
+              <StaticImage
+                src="../assets/img/mobile-app.jpg"
                 alt="image of app"
                 className="footer-column-image"
+                layout="fullWidth"
+                placeholder="tracedSVG"
               />
               <a
                 href="https://play.google.com/store/apps/details?id=com.inno.epodroznik.android"
