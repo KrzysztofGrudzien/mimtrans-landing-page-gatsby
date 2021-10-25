@@ -1,10 +1,12 @@
 import React from "react"
 import Layout from "../components/Layout"
+import Hero from "../components/Hero"
 
 const About = () => {
   return (
     <>
       <Layout>
+        <Hero />
         <section id="about" className="about">
           <h2 className="about-title">o nas</h2>
           <h3 className="about-subtitle">Nasza krótka historia</h3>
