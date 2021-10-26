@@ -1,0 +1,29 @@
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 4rem;
+}
+
+.card {
+  align-items: center;
+  background-image: $gradient-primary;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 340px;
+  padding: 0 2rem;
+  transition: transform 0.5s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &-title {
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-top: 2rem;
+    text-align: center;
+  }
+}
