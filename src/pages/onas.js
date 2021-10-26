@@ -9,6 +9,15 @@ import { FaUsers } from "@react-icons/all-files/fa/FaUsers"
 import styled from "styled-components"
 
 const About = () => {
+  const styleIcon = {
+    fill: "#f1f1f1",
+  }
+
+  const propIcon = {
+    size: "4rem",
+  }
+
+  const { size } = propIcon
   return (
     <>
       <Layout>
@@ -106,19 +115,19 @@ const About = () => {
           <div className="cards">
             <div className="card">
               <IconWrapper>
-                <RiHealthBookFill size="4rem" style={{ fill: "#f1f1f1" }} />
+                <RiHealthBookFill size={size} style={styleIcon} />
               </IconWrapper>
               <span className="card-title">Doświadczenie i bezpieczeństwo</span>
             </div>
             <div className="card">
               <IconWrapper>
-                <FaBus size="4rem" style={{ fill: "#f1f1f1" }} />
+                <FaBus size={size} style={styleIcon} />
               </IconWrapper>
               <span className="card-title">Kompleksowe usługi przewozowe</span>
             </div>
             <div className="card">
               <IconWrapper>
-                <FaAward size="4rem" style={{ fill: "#f1f1f1" }} />
+                <FaAward size={size} style={styleIcon} />
               </IconWrapper>
               <span className="card-title">
                 Wysoka jakość i konkurencyjne ceny
@@ -126,7 +135,7 @@ const About = () => {
             </div>
             <div className="card">
               <IconWrapper>
-                <FaUsers size="4rem" style={{ fill: "#f1f1f1" }} />
+                <FaUsers size={size} style={styleIcon} />
               </IconWrapper>
               <span className="card-title">
                 indywidualne podejście do klienta i zlecenia
