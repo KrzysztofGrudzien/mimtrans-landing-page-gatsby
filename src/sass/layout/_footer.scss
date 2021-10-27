@@ -84,14 +84,21 @@
   }
 
   &-link-app {
+    align-items: center;
     background-image: $gradient-secondary;
     border-radius: 3px;
     color: $color-bg;
-    display: block;
+    display: flex;
     font-size: 1.2rem;
     letter-spacing: 1px;
     margin-top: 1rem;
-    padding: 1rem 1rem;
+    padding: 0.75rem;
     text-align: center;
+
+    svg {
+      height: 1.6rem;
+      margin-right: 1rem;
+      width: 1.6rem;
+    }
   }
 }
