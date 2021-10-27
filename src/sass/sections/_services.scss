@@ -1,0 +1,18 @@
+.services {
+  &-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4rem;
+  }
+
+  &-card {
+    background-image: $gradient-primary;
+    min-height: 700px;
+  }
+
+  &-description-big {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+}
