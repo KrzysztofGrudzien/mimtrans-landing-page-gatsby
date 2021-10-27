@@ -2,6 +2,9 @@ import React from "react"
 import Layout from "../components/Layout"
 import Hero from "../components/Hero"
 import { StaticImage } from "gatsby-plugin-image"
+import { Link } from "gatsby"
+import styled from "styled-components"
+import { MdEmail } from "@react-icons/all-files/md/MdEmail"
 
 const Services = () => {
   return (
@@ -24,10 +27,14 @@ const Services = () => {
                   W ofercie wynajmu mamy także 9 osobowe samochody. Prosimy o
                   przesłanie do nas zapytania ofertowego lub kontakt
                   telefoniczny - 602 128 068
-                  <a href="#">Wyślij formularz kontaktowy</a>
+                  <div className="link-wrapper">
+                    <LinkForm to="/kontakt" className="btn btn-primary">
+                      <MdEmail /> Wyślij formularz kontaktowy
+                    </LinkForm>
+                  </div>
                 </p>
               </article>
-              <article className="services-article mt-5">
+              <article className="services-article mt-8">
                 <h3 className="services-subtitle">Zakres usług obejmuje</h3>
                 <p className="services-description">
                   usługi transportowe wynajem autobusów obsługa linii
@@ -83,5 +90,22 @@ const Services = () => {
     </>
   )
 }
+
+const LinkForm = styled(Link)`
+  align-items: center;
+  background-image: linear-gradient(to bottom right, #ff9f3d, #f78253);
+  border-radius: 3px;
+  color: #fff;
+  display: flex;
+  float: right;
+  margin-top: 2rem;
+  padding: 0.7rem;
+
+  svg {
+    height: 1.6rem;
+    margin-right: 0.5rem;
+    width: 1.6rem;
+  }
+`
 
 export default Services
