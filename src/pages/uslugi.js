@@ -66,12 +66,14 @@ const Services = () => {
                   Zapewniamy regularny sprawny transport mieszkańcom Mszczonowa,
                   Radziejowic, Żabiej Woli, Żyrardowa, Nadarzyna i Raszyna.
                 </p>
-                <StaticImage
-                  src="../assets/img/bus-zielony-2@2x.jpg"
-                  alt="zdjęcia autobusów wycieczkowych"
-                  layout="constrained"
-                  placeholder="tracedSVG"
-                />
+                <ImageWrapper>
+                  <StaticImage
+                    src="../assets/img/mapa-svg.svg"
+                    alt="zdjęcie mapy okolic"
+                    layout="constrained"
+                    placeholder="tracedSVG"
+                  />
+                </ImageWrapper>
               </article>
             </div>
           </div>
@@ -79,9 +81,15 @@ const Services = () => {
             <article className="services-article">
               <h3 className="services-subtitle">Nasza flota samochodowa</h3>
               <div className="services-cards">
-                <div className="services-card"></div>
-                <div className="services-card"></div>
-                <div className="services-card"></div>
+                <div className="services-card">
+                  <h3>Przewóz osób i wynajem</h3>
+                </div>
+                <div className="services-card">
+                  <h3>Wycieczki</h3>
+                </div>
+                <div className="services-card">
+                  <h3>Transport publiczny</h3>
+                </div>
               </div>
             </article>
           </div>
@@ -106,6 +114,12 @@ const LinkForm = styled(Link)`
     margin-right: 0.5rem;
     width: 1.6rem;
   }
+`
+
+const ImageWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  margin: 5rem 0 0 0;
 `
 
 export default Services
