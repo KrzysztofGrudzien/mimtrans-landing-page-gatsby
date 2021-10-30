@@ -1,0 +1,31 @@
+.services {
+  &-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4rem;
+  }
+
+  &-card {
+    align-items: center;
+    background-image: $gradient-primary;
+    display: flex;
+    justify-content: center;
+    min-height: 700px;
+    text-transform: uppercase;
+
+    h3 {
+      color: $color-bg;
+      font-weight: 900;
+      font-size: 2.625rem;
+      letter-spacing: 1px;
+      text-align: center;
+      text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  &-description-big {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+}

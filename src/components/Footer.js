@@ -2,6 +2,8 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 import { SiFacebook } from "@react-icons/all-files/si/SiFacebook"
+import { FaGooglePlay } from "@react-icons/all-files/fa/FaGooglePlay"
+
 import data from "../data/data"
 import { StaticImage } from "gatsby-plugin-image"
 
@@ -79,7 +81,7 @@ const Footer = () => {
                 rel="noreferrer"
                 className="footer-link-app"
               >
-                pobierz aplikacje z Google Play
+                <FaGooglePlay /> pobierz aplikacje z Google Play
               </a>
             </div>
           </div>
