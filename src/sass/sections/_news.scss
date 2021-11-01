@@ -1,0 +1,12 @@
+.news {
+  &-list {
+    margin-top: 2rem;
+    padding-left: 0;
+  }
+
+  &-item {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+  }
+}
