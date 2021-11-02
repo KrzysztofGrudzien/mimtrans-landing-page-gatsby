@@ -37,7 +37,7 @@ const Footer = () => {
             <ul className="footer-list">
               {sitemap.map(({ path, title }) => {
                 return (
-                  <li className="footer-list-item">
+                  <li className="footer-list-item" key={title}>
                     <Link
                       to={path}
                       className="footer-list-link"
@@ -61,10 +61,15 @@ const Footer = () => {
               </p>
               <h3 className="footer-title">Kontakt z nami</h3>
               <p>
-                USŁUGI TRANSPORTOWE Jerzy Wiśniewski Nowa Bukówka, ul.
-                Rumiankowa 41 96-321 Żabia Wola Dane kontaktowe Jerzy
-                Wiśniewski: 602 516 919 Tadeusz Pałka: 602 128 068 E-mail:
-                mimtrans@o2.pl
+                USŁUGI TRANSPORTOWE Jerzy Wiśniewski
+                <br /> Nowa Bukówka
+                <br /> ul. Rumiankowa 41 <br />
+                96-321 Żabia Wola
+                <br />
+                <br /> Dane kontaktowe:
+                <br /> Jerzy Wiśniewski: 602 516 919 <br />
+                Tadeusz Pałka: 602 128 068 <br />
+                E-mail: mimtrans@o2.pl
               </p>
             </div>
             <div className="footer-column-app">
