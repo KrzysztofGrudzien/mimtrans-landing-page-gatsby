@@ -1,0 +1,33 @@
+.partners {
+  &-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+  }
+
+  &-card {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 400px;
+
+    &-description {
+      height: 180px;
+      padding-top: 1rem;
+    }
+
+    &-link {
+      background-image: $gradient-primary;
+      color: #fff;
+      display: block;
+      font-size: 1.625rem;
+      height: 4rem;
+      line-height: 4rem;
+      margin-top: 2rem;
+      text-align: center;
+      text-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
+      width: 100%;
+    }
+  }
+}
