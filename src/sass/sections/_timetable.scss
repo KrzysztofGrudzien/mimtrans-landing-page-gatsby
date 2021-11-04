@@ -1,0 +1,79 @@
+.timetable {
+  &-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4rem;
+  }
+
+  &-list {
+    border-left: 1px solid $color-text;
+    margin-left: 2rem;
+  }
+
+  &-item {
+    padding: 0.2rem 0;
+    position: relative;
+
+    &::after {
+      background-color: $color-text;
+      content: "";
+      height: 1px;
+      left: -1.8rem;
+      position: absolute;
+      top: 1rem;
+      width: 1rem;
+    }
+  }
+
+  &-link {
+    align-items: center;
+    color: $color-text;
+    display: flex;
+  }
+
+  &-icon {
+    height: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  &-card {
+    background-color: $color-white;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.07);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 600px;
+
+    &-download {
+      align-items: center;
+      display: flex;
+      justify-content: flex-end;
+      font-size: 1.2rem;
+      min-height: 4rem;
+      padding-right: 1rem;
+
+      svg {
+        margin-left: 1rem;
+      }
+    }
+
+    &-header {
+      color: $color-white;
+      font-size: 5rem;
+      font-weight: 700;
+      padding-left: 2rem;
+
+      &-primary {
+        background-image: $gradient-primary;
+      }
+
+      &-secondary {
+        background-image: $gradient-secondary;
+      }
+
+      &-tertiary {
+        background-image: $gradient-tertiary;
+      }
+    }
+  }
+}
