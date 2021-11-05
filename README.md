@@ -4,6 +4,7 @@
 - Gatsby.js
 - Styled Components
 - Sass
+- Framer Motion
 
 
-#In progress...
+#In progress
