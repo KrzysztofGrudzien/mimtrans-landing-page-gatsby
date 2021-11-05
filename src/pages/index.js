@@ -1,12 +1,18 @@
 import React from "react"
 import Layout from "../components/Layout"
 import { StaticImage } from "gatsby-plugin-image"
+import { AiFillCloseCircle } from "@react-icons/all-files/ai/AiFillCloseCircle"
 
 const Home = () => {
   return (
     <>
       <Layout>
         <section className="home flex-wrap" id="home">
+          <div className="home-news">
+            <AiFillCloseCircle size={25} className="home-icon-close" />
+            17.09.2021 Kontakt mailowy po przez stronę mimtrans.pl został
+            uruchomiony.
+          </div>
           <div className="home-wrapper">
             <h2 className="home-title">
               MIM<span className="home-title-green">TRANS</span>

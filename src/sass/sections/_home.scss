@@ -1,7 +1,15 @@
 .home {
   color: $color-bg;
-  height: 50vh;
-  margin-bottom: 12rem;
+  min-height: 50vh;
+  margin-bottom: 5rem;
+
+  &-news {
+    background-image: $gradient-secondary;
+    margin-bottom: 1rem;
+    padding: 2rem;
+    position: relative;
+    width: 100%;
+  }
 
   &-title {
     font-size: 4.25rem;
@@ -24,12 +32,19 @@
     background-color: $color-text-darker;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 0 6rem;
+    justify-content: space-evenly;
+    padding: 0 2rem;
     width: 40%;
   }
 
   &-image-wrapper {
     width: 60%;
+  }
+
+  &-icon-close {
+    cursor: pointer;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
   }
 }
