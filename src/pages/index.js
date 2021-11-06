@@ -1,15 +1,28 @@
-import React from "react"
+import React, { useState } from "react"
 import Layout from "../components/Layout"
 import { StaticImage } from "gatsby-plugin-image"
 import { AiFillCloseCircle } from "@react-icons/all-files/ai/AiFillCloseCircle"
 
 const Home = () => {
+  const [isOpenNewsBox, setIsOpenNewsBox] = useState(false)
+
+  const handleNewsBox = () => {
+    setIsOpenNewsBox(!isOpenNewsBox)
+  }
+
   return (
     <>
       <Layout>
         <section className="home flex-wrap" id="home">
-          <div className="home-news">
-            <AiFillCloseCircle size={25} className="home-icon-close" />
+          <div
+            className="home-news"
+            style={isOpenNewsBox ? { display: "none" } : null}
+          >
+            <AiFillCloseCircle
+              size={25}
+              className="home-icon-close"
+              onClick={handleNewsBox}
+            />
             17.09.2021 Kontakt mailowy po przez stronę mimtrans.pl został
             uruchomiony.
           </div>
