@@ -1,13 +1,60 @@
-import React from "react"
+import React, { useState } from "react"
 import Layout from "../components/Layout"
 import Hero from "../components/Hero"
 import { StaticImage } from "gatsby-plugin-image"
+import styled from "styled-components"
+import { AiFillCloseCircle } from "@react-icons/all-files/ai/AiFillCloseCircle"
 
 const Testimonials = () => {
+  const [isOpenModalWindow, setIsOpenModalWindow] = useState(false)
+  const [srcModalWindow, setSrcModalWindow] = useState("")
+
+  const handleLoadSrcModalWindow = e => {
+    setSrcModalWindow(e.target.id)
+  }
+
+  const handleOpenModalWindow = () => {
+    setIsOpenModalWindow(!isOpenModalWindow)
+  }
+
   return (
     <>
       <Layout>
         <Hero />
+        <div style={isOpenModalWindow ? { display: "none" } : null}>
+          <ModalWindow>
+            <AiFillCloseCircle
+              size={25}
+              className="home-icon-close"
+              onClick={handleOpenModalWindow}
+              fill="white"
+            />
+            <ModalWindowContent>
+              {srcModalWindow === "referencja-3" ? (
+                <StaticImage
+                  src="../assets/img/referencja-3.jpg"
+                  alt="zdjęcie referencji klienta"
+                  layout="constrained"
+                  placeholder="tracedSVG"
+                />
+              ) : srcModalWindow === "referencja-4" ? (
+                <StaticImage
+                  src="../assets/img/referencja-4.jpg"
+                  alt="zdjęcie referencji klienta"
+                  layout="constrained"
+                  placeholder="tracedSVG"
+                />
+              ) : (
+                <StaticImage
+                  src="../assets/img/referencja-1.jpg"
+                  alt="zdjęcie referencji klienta"
+                  layout="constrained"
+                  placeholder="tracedSVG"
+                />
+              )}
+            </ModalWindowContent>
+          </ModalWindow>
+        </div>
         <section className="testimonials" id="testimonials">
           <div className="container mt-3">
             <h2 className="testimonials-title">rekomendacje</h2>
@@ -25,12 +72,17 @@ const Testimonials = () => {
                 <span className="testimonials-card-name">
                   Marzena Pytlak - dyrektor szkoły
                 </span>
-                <div className="testimonials-card-img-wrapper">
+                <div
+                  className="testimonials-card-img-wrapper"
+                  onClick={handleOpenModalWindow}
+                >
                   <StaticImage
                     src="../assets/img/referencja-3.jpg"
                     alt="zdjęcie referencji klienta"
                     layout="constrained"
                     placeholder="tracedSVG"
+                    id="referencja-3"
+                    onClick={handleLoadSrcModalWindow}
                   />
                 </div>
               </article>
@@ -45,12 +97,17 @@ const Testimonials = () => {
                 <span className="testimonials-card-name">
                   Zespół FRESH z UKS "Olimpijczyk 2008
                 </span>
-                <div className="testimonials-card-img-wrapper">
+                <div
+                  className="testimonials-card-img-wrapper"
+                  onClick={handleOpenModalWindow}
+                >
                   <StaticImage
                     src="../assets/img/referencja-4.jpg"
                     alt="zdjęcie referencji klienta"
                     layout="constrained"
                     placeholder="tracedSVG"
+                    id="referencja-4"
+                    onClick={handleLoadSrcModalWindow}
                   />
                 </div>
               </article>
@@ -73,12 +130,17 @@ const Testimonials = () => {
                 <span className="testimonials-card-name">
                   Bogumił Mrówczyński - dyrektor
                 </span>
-                <div className="testimonials-card-img-wrapper">
+                <div
+                  className="testimonials-card-img-wrapper"
+                  onClick={handleOpenModalWindow}
+                >
                   <StaticImage
                     src="../assets/img/referencja-1.jpg"
                     alt="zdjęcie referencji klienta"
                     layout="constrained"
                     placeholder="tracedSVG"
+                    id="referencja-1"
+                    onClick={handleLoadSrcModalWindow}
                   />
                 </div>
               </article>
@@ -89,5 +151,22 @@ const Testimonials = () => {
     </>
   )
 }
+
+const ModalWindowContent = styled.div`
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+`
+
+const ModalWindow = styled.div`
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 50%;
+  height: 90vh;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+`
 
 export default Testimonials
