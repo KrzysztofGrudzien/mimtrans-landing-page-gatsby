@@ -23,8 +23,9 @@ const Home = () => {
               className="home-icon-close"
               onClick={handleNewsBox}
             />
-            17.09.2021 Kontakt mailowy po przez stronę mimtrans.pl został
-            uruchomiony.
+            15.11.2021 Przedsiębiorca uzyskał subwencję finansową w ramach
+            programu rządowego „Tarcza Finansowa 2.0 Polskiego Funduszu Rozwoju
+            dla Mikro, Małych i Średnich Firm”, udzieloną przez PFR SA.
           </div>
           <div className="home-wrapper">
             <h2 className="home-title">
