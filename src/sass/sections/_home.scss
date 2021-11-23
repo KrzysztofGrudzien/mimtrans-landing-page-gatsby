@@ -14,17 +14,20 @@
   &-title {
     font-size: 4.25rem;
     position: relative;
+    z-index: 9;
 
     &-green {
       color: $color-primary-darker;
     }
 
     &::after {
-      bottom: -2.5rem;
+      bottom: -3.5rem;
       content: "USŁUGI TRANSPORTOWE Jerzy Wiśniewski";
+      color: #00af50;
       font-size: 1.125rem;
-      left: 3px;
+      left: 13px;
       position: absolute;
+      z-index: 10;
     }
   }
 

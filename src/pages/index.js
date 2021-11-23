@@ -2,6 +2,8 @@ import React, { useState } from "react"
 import Layout from "../components/Layout"
 import { StaticImage } from "gatsby-plugin-image"
 import { AiFillCloseCircle } from "@react-icons/all-files/ai/AiFillCloseCircle"
+import logo from "../assets/img/logo.svg"
+import styled from "styled-components"
 
 const Home = () => {
   const [isOpenNewsBox, setIsOpenNewsBox] = useState(false)
@@ -29,7 +31,9 @@ const Home = () => {
           </div>
           <div className="home-wrapper">
             <h2 className="home-title">
-              MIM<span className="home-title-green">TRANS</span>
+              <ImgWrapper>
+                <img src={logo} alt="logo" />
+              </ImgWrapper>
             </h2>
             <p className="home-description">
               Nasza firma oferuje wynajem różnej wielkości pojazdów (busów,
@@ -55,5 +59,16 @@ const Home = () => {
     </>
   )
 }
+
+const ImgWrapper = styled.div`
+  align-items: center;
+  background-color: #fff;
+  display: flex;
+  padding: 2rem 1rem;
+
+  img {
+    width: 50%;
+  }
+`
 
 export default Home
