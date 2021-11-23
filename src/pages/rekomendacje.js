@@ -6,7 +6,7 @@ import styled from "styled-components"
 import { AiFillCloseCircle } from "@react-icons/all-files/ai/AiFillCloseCircle"
 
 const Testimonials = () => {
-  const [isOpenModalWindow, setIsOpenModalWindow] = useState(false)
+  const [isOpenModalWindow, setIsOpenModalWindow] = useState(true)
   const [srcModalWindow, setSrcModalWindow] = useState("")
 
   const handleLoadSrcModalWindow = e => {
