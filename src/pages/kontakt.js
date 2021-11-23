@@ -6,7 +6,7 @@ const Contact = () => {
   return (
     <>
       <Layout>
-        <Hero />
+        <Hero type="contact" />
         <section className="contact flex-wrap" id="contact">
           <h2 className="contact-title">kontakt</h2>
           <div className="container-col mb-5">

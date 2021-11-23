@@ -10,7 +10,7 @@ const Services = () => {
   return (
     <>
       <Layout>
-        <Hero />
+        <Hero type="services" />
         <section id="services" className="services">
           <div className="flex-wrap mb-5">
             <h2 className="services-title">usługi</h2>

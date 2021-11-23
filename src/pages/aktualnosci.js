@@ -6,7 +6,7 @@ const News = () => {
   return (
     <>
       <Layout>
-        <Hero />
+        <Hero type="news" />
         <section id="news" className="news">
           <div className="flex-wrap">
             <h2 className="news-title">aktualności</h2>

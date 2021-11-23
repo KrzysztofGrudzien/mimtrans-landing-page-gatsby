@@ -21,7 +21,7 @@ const About = () => {
   return (
     <>
       <Layout>
-        <Hero />
+        <Hero type="about" />
         <section id="about" className="about">
           <div className="flex-wrap mb-5">
             <h2 className="about-title">o nas</h2>

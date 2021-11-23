@@ -20,7 +20,7 @@ const Testimonials = () => {
   return (
     <>
       <Layout>
-        <Hero />
+        <Hero type="testimonials" />
         <div style={isOpenModalWindow ? { display: "none" } : null}>
           <ModalWindow>
             <AiFillCloseCircle
