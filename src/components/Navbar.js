@@ -1,16 +1,28 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 import data from "../data/data"
 import { AiTwotoneCalendar } from "@react-icons/all-files/ai/AiTwotoneCalendar"
 import { FaMoneyCheckAlt } from "@react-icons/all-files/fa/FaMoneyCheckAlt"
 import { IoIosMenu } from "@react-icons/all-files/io/IoIosMenu"
+import { GrClose } from "@react-icons/all-files/gr/GrClose"
+
 import logo from "../assets/img/logo.svg"
 
 const Navbar = () => {
   const { navigation } = data
   const styles = {
     marginRight: "1rem",
+  }
+
+  const navStyles = {
+    display: "none",
+  }
+
+  const [isToggleMenu, setIsToggleMenu] = useState(false)
+
+  const handleToggleMenu = () => {
+    setIsToggleMenu(!isToggleMenu)
   }
 
   const addIcon = (icon, iconFill, iconSize) => {
@@ -59,9 +71,13 @@ const Navbar = () => {
           )}
         </ul>
       </nav>
-      <nav className="navbar navbar-mobile">
-        <MenuIconBox>
-          <IoIosMenu size="40" />
+      <IoIosMenu size="40" className="icon-nav" onClick={handleToggleMenu} />
+      <nav
+        className="navbar navbar-mobile"
+        style={isToggleMenu ? navStyles : null}
+      >
+        <MenuIconBox onClick={handleToggleMenu}>
+          <GrClose size="30" />
         </MenuIconBox>
         <ul className="navbar-list">
           {navigation.map(
@@ -98,6 +114,7 @@ const Navbar = () => {
 }
 
 const Header = styled.header`
+  align-items: center;
   display: flex;
   justify-content: space-between;
   padding: 2rem;
@@ -111,7 +128,7 @@ const Header = styled.header`
 const MenuIconBox = styled.div`
   position: fixed;
   top: 2rem;
-  right: 2rem;
+  right: 1rem;
   width: 2rem;
   height: 2rem;
   cursor: pointer;
