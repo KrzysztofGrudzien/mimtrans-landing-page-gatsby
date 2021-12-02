@@ -1,6 +1,42 @@
 .navbar {
+  position: relative;
+  transition: width 0.3s ease-in-out;
+
+  &-mobile {
+    @media screen and (max-width: 1380px) and (min-width: 200px) {
+      display: block;
+    }
+    display: none;
+  }
+
+  &-desktop {
+    @media (max-width: 1381px) {
+      display: none;
+    }
+    display: block;
+  }
+
   &-list {
     display: flex;
+
+    @media screen and (max-width: 1380px) {
+      background-color: $color-bg;
+      box-shadow: 0 0 2rem rgba(0, 0, 0, 0.07);
+      flex-direction: column;
+      height: 100vh;
+      justify-content: center;
+      margin-top: 0;
+      position: fixed;
+      padding-right: 2.5rem;
+      top: 0;
+      right: 0;
+      width: 500px;
+      z-index: 1000;
+    }
+
+    @media screen and (min-width: 200px) and (max-width: 768px) {
+      width: 100%;
+    }
   }
 
   &-item {
@@ -12,9 +48,21 @@
       background-image: $gradient-secondary;
       border-radius: $radius;
       margin-left: 2rem;
+      margin-top: 0;
+
+      @media screen and (max-width: 1380px) and (min-width: 200px) {
+        margin-left: 0.5rem;
+        margin-top: 5rem;
+      }
 
       &:last-child {
         margin-left: 0.5rem;
+        margin-top: 0;
+
+        @media screen and (max-width: 1380px) and (min-width: 200px) {
+          margin-left: 0.5rem;
+          margin-top: 0.5rem;
+        }
       }
 
       a {

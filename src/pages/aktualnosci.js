@@ -16,14 +16,6 @@ const News = () => {
           </div>
           <ul className="news-list">
             <li className="news-item">
-              <b>15.11.2021</b>
-              <span>
-                Przedsiębiorca uzyskał subwencję finansową w ramach programu
-                rządowego „Tarcza Finansowa 2.0 Polskiego Funduszu Rozwoju dla
-                Mikro, Małych i Średnich Firm”, udzieloną przez PFR SA.
-              </span>
-            </li>
-            <li className="news-item">
               <b>17.09.2021</b>
               <span>
                 Kontakt mailowy po przez stronę mimtrans.pl został uruchomiony.
