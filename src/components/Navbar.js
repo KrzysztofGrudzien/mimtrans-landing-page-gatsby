@@ -6,7 +6,6 @@ import { AiTwotoneCalendar } from "@react-icons/all-files/ai/AiTwotoneCalendar"
 import { FaMoneyCheckAlt } from "@react-icons/all-files/fa/FaMoneyCheckAlt"
 import { IoIosMenu } from "@react-icons/all-files/io/IoIosMenu"
 import { GrClose } from "@react-icons/all-files/gr/GrClose"
-
 import logo from "../assets/img/logo.svg"
 
 const Navbar = () => {
@@ -16,6 +15,10 @@ const Navbar = () => {
   }
 
   const navStyles = {
+    transform: "translateX(0)",
+  }
+
+  const iconStyles = {
     display: "none",
   }
 
@@ -72,14 +75,14 @@ const Navbar = () => {
         </ul>
       </nav>
       <IoIosMenu size="40" className="icon-nav" onClick={handleToggleMenu} />
-      <nav
-        className="navbar navbar-mobile"
-        style={isToggleMenu ? navStyles : null}
-      >
-        <MenuIconBox onClick={handleToggleMenu}>
+      <nav className="navbar navbar-mobile">
+        <MenuIconBox
+          onClick={handleToggleMenu}
+          style={isToggleMenu ? iconStyles : null}
+        >
           <GrClose size="30" />
         </MenuIconBox>
-        <ul className="navbar-list">
+        <ul className="navbar-list" style={isToggleMenu ? navStyles : null}>
           {navigation.map(
             (
               {
@@ -118,6 +121,7 @@ const Header = styled.header`
   display: flex;
   justify-content: space-between;
   padding: 2rem;
+  position: relative;
 
   a {
     align-items: center;
