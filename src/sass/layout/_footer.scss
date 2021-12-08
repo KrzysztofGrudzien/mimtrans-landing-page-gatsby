@@ -5,6 +5,10 @@
   grid-template-rows: 1fr 4rem;
   position: relative;
 
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
+
   &-title {
     color: $color-primary-darker;
   }
@@ -70,9 +74,19 @@
     }
   }
 
+  &-column:nth-child(1) {
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+    }
+  }
+
   &-column:nth-child(3) {
     display: flex;
     justify-content: space-between;
+
+    @media screen and (max-width: 1380px) {
+      flex-direction: column;
+    }
 
     div {
       width: 100%;
@@ -81,6 +95,11 @@
 
   &-column-app {
     padding-top: 2.8rem;
+    margin-left: 2rem;
+
+    @media screen and (max-width: 1380px) {
+      margin-left: 0;
+    }
   }
 
   &-link-app {

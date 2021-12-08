@@ -45,6 +45,13 @@ const ActionNav = () => {
             }
           )}
         </ActionList>
+        <Link
+          to="/aktualnosci"
+          className="navbar--active-link navbar--active-link-mobile"
+          activeClassName="navbar-link--active"
+        >
+          <MdNotificationsActive fill="#ff9f3d" /> Aktualności
+        </Link>
       </ActionContainer>
     </ActionWrapper>
   )
@@ -59,10 +66,32 @@ const ActionContainer = styled.div`
   display: flex;
   justify-content: flex-end;
   padding: 1rem 2rem;
+
+  a.navbar--active-link-mobile {
+    color: #fdfdfd;
+    align-items: center;
+    display: flex;
+    font-weight: 600;
+
+    svg {
+      font-size: 1.6rem;
+      margin-right: 1rem;
+    }
+  }
+
+  a.navbar--active-link-mobile {
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
 `
 
 const ActionList = styled.ul`
   display: flex;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `
 
 const ActionListItem = styled.li`
